@@ -1,3 +1,5 @@
+ <div class="container">
+  <div class="flat">
  <%= simple_form_for(@flat) do |f| %>
   <%#= f.error_notification %>
   <%#= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -12,8 +14,15 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class:"btn-primary" %>
   </div>
 <% end %>
+</div>
+<div class="links">
 
-<%= link_to 'Back', flats_path %>
+ <p><%= link_to flats_path do %>
+  <i class="fas fa-backward">Back</i>
+  <% end %>
+  </p>
+  </div>
+  </div>

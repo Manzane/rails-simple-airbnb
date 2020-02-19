@@ -1,2 +1,39 @@
 // Import page-specific CSS files here.
 @import "home";
+
+body {
+  font-family: sans-serif;
+}
+#text{
+  font-family: sans-serif;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 30%;
+  margin: 10px;
+  background-color: white;
+  box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, .1);
+  border-radius: 10px;
+  padding: 2%;
+}
+.flat {
+   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+

@@ -1,12 +1,25 @@
+
 <h1><%= @flat.name %></h1>
 
-
-  <div>
+<div class="container">
+  <div class="flat">
     <p><%= @flat.description %></p>
     <p>Number of Guests: <%= @flat.number_of_guests %> </p>
     <p>Price per night: <%= @flat.price_per_night %>€</p>
 
   </div>
-  <p><%= link_to "Edit this flat", edit_flat_path(@flat) %></p>
-  <p><%= link_to "Back", flats_path %></p>
+  <div class="links">
+  <p><%= link_to edit_flat_path(@flat) do %>
+  <i class="far fa-edit">Edit</i>
+  <% end %>
+  </p>
+  <p><%= link_to flat_path(@flat), method: :delete,
+                data: { confirm: "Are you sure?" } do %>
+                <i class='far fa-trash-alt'>Delete</i>
+                <% end %></p>
+  <p><%= link_to flats_path do %>
+  <i class="fas fa-backward">Back</i>
+  <% end %>
+  </p>
+</div>
 
