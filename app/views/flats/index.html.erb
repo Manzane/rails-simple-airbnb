@@ -3,7 +3,9 @@
       <% @flats.each do |flat| %>
         <div class="cards">
           <div class="flat">
+              <div class="card-img"><img src="<%= flat.img_url %>"></div>
               <h5 class="card-title"><%= flat.name %></h5>
+              <p class="card-text"><i class="fas fa-map-marker-alt"> <em><%= flat.address %></em></i></p>
               <p class="card-text"><%= flat.description %></p>
               <p class="card-text"><i class="fas fa-user-friends"> <%= flat.number_of_guests %></i> - <i class="fas fa-moon"> <%= flat.price_per_night %>€</i></p>
               <p class="card-link">
